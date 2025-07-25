@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {TuiRoot} from "@taiga-ui/core";
+import {tuiHintOptionsProvider, TuiRoot} from "@taiga-ui/core";
+import {tuiBreadcrumbsOptionsProvider} from "@taiga-ui/kit";
 
 @Component({
   standalone: true,
@@ -7,6 +8,10 @@ import {TuiRoot} from "@taiga-ui/core";
   template: '<tui-root>{{title}}</tui-root>',
   imports: [
     TuiRoot
+  ],
+  providers: [
+    tuiBreadcrumbsOptionsProvider({}),
+    tuiHintOptionsProvider({})
   ]
 })
 export class AppComponent {
